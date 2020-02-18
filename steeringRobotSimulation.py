@@ -94,10 +94,10 @@ def driveCircle():
     #leave this last line
     print(myRobot)
 
-def leftTurn():
+def rightTurn():
     # Write code that turns the robot 90 degrees by running the motors for a given amount of time.
     k = 2
-    robot_compass_setpoint = myRobot.compass + 90
+    robot_compass_setpoint = myRobot.compass - 90
     error = robot_compass_setpoint - myRobot.compass
 
     while(abs(error) > 0.1):
@@ -134,7 +134,7 @@ def driveStraightDistance(distance):
 #driveStraightDistanceProportionalControl()
 #driveSquare()
 #driveStraightDistance(200)
-leftTurn()
+rightTurn()
 #driveCircle()
 
 
