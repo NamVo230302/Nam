@@ -78,7 +78,6 @@ def driveSquare():
         #print(myRobot.compass)
         driveStraightDistance(150)
         #turnEastProportionalControl()
-        leftTurn()
         myRobot.reset_encoders()
     #leave this last line
     print(myRobot)
@@ -86,11 +85,12 @@ def driveSquare():
 
 def driveCircle():
     # Write code that drives the robot in a circle that fills the green screen, but doesn't go outside of it.
-    driveStraightDistance(150)
-
-    while (not myRobot.compass > 89):
-        myRobot.reset_encoders()
-        myRobot.set_motor_velocity(50, 25)
+    driveStraightDistance(300)
+    
+    driveTime = 50
+    myRobot.set_motor_velocity(50, 46)
+    while (myRobot.timer < driveTime):
+        myRobot.update()
     #leave this last line
     print(myRobot)
 
@@ -134,8 +134,8 @@ def driveStraightDistance(distance):
 #driveStraightDistanceProportionalControl()
 #driveSquare()
 #driveStraightDistance(200)
-rightTurn()
-#driveCircle()
+#rightTurn()
+driveCircle()
 
 
 print(myRobot)
