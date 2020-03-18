@@ -100,7 +100,7 @@ class robot:
             dist += random.gauss(0.0, self.sense_noise)
             Z.append(dist)
         return Z
-
+#personal video
     def set_velocity(self,velocity,angle):
       self.orientation = angle
       self.velocity = velocity
